@@ -1,0 +1,10 @@
+###  OVERVIEW
+GET https://www.alphavantage.co/query?function=OVERVIEW&symbol=BABA&apikey=NEW3GN8XVDIRFTHU
+
+###  SYMBOL_SEARCH
+GET https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=sp500&apikey=NEW3GN8XVDIRFTHU
+
+###  TIME_SERIES_MONTHLY
+GET https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=SPY&apikey=NEW3GN8XVDIRFTHU
+
+

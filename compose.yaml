@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+
+  # React app
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+
+  # Spring Boot app
+  backend:
+    image: stock-app
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  # PostgresSQL database service
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: data_app
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    ports:
+      - "5432:5432"
